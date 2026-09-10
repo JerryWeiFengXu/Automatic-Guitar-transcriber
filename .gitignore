@@ -13,7 +13,7 @@
 
 # ...and re-include exactly what should be tracked, at any depth.
 !.gitignore
-!README
+!README*
 !*.py
 
 # README screenshots — explicit exceptions since the README embeds these.
