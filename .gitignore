@@ -31,6 +31,13 @@ datasets
 images
 runs
 
+# ...except this one test-image screenshot referenced from the README. Once a
+# directory is excluded above, git won't even look inside it for later "!"
+# rules unless each ancestor directory is re-included too, hence all three lines.
+!images/
+!images/test_image/
+!images/test_image/kingGnu6.png
+
 # NOTE: this is an allow-list, not a blocklist — anything new you want tracked
 # (requirements.txt, a LICENSE, docs/, etc.) needs its own "!pattern" line
 # added below, or it'll be silently excluded like everything else.
