@@ -16,6 +16,11 @@
 !README
 !*.py
 
+# README screenshots — explicit exceptions since the README embeds these.
+!noteOutput.png
+!rhythmOutput.png
+!output-1.png
+
 # Re-exclude vendored/virtual-env trees even though they're full of .py files
 # that would otherwise match the rule above — these aren't "your" code.
 .venv/
