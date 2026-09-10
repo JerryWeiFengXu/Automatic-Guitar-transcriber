@@ -1,0 +1,1 @@
+an automatic guitar tab transcription tool that converts images of guitar tablature into editable, playable XML files — training a YOLOv8 computer vision model from scratch to detect and interpret tab notation directly from images. OpenCV to analyze the image and obtain information such as line numbers, and designed the pipeline that converts the images to the xml file.

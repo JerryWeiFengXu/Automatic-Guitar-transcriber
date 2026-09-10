@@ -1,0 +1,31 @@
+# Allow-list: this repo only tracks code, the README, and this file.
+# Everything else — images, datasets, the virtual env, model weights, training
+# run artifacts/logs, generated output files (gp5/xml/musicxml/debug pngs),
+# caches, and OS/editor cruft — is excluded, whatever it's named or where it
+# lives, rather than trying to list every kind of "general thing" by hand.
+
+# Ignore everything by default...
+*
+
+# ...but still look inside every directory (otherwise git won't even check
+# whether something further down matches one of the re-include rules below)
+!*/
+
+# ...and re-include exactly what should be tracked, at any depth.
+!.gitignore
+!README
+!*.py
+
+# Re-exclude vendored/virtual-env trees even though they're full of .py files
+# that would otherwise match the rule above — these aren't "your" code.
+.venv/
+venv/
+env/
+ENV/
+datasets
+images
+runs
+
+# NOTE: this is an allow-list, not a blocklist — anything new you want tracked
+# (requirements.txt, a LICENSE, docs/, etc.) needs its own "!pattern" line
+# added below, or it'll be silently excluded like everything else.
